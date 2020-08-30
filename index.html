@@ -297,34 +297,110 @@
 	  </section>
 
 	  <div class="container">
-	  <div class="row">
-		<div class="col-sm-6 col-sm-offset-3">
-			 <div class="well" style="margin-top: 10%;">
-			 <h3>Send me a message</h3>
-			 <form role="form" id="contactForm" data-toggle="validator" class="shake">
-				  <div class="row">
-						<div class="form-group col-sm-6">
-							 <label for="name" class="h4">Name</label>
-							 <input type="text" class="form-control" id="name" placeholder="Enter name" required data-error="NEW ERROR MESSAGE">
-							 <div class="help-block with-errors"></div>
-						</div>
-						<div class="form-group col-sm-6">
-							 <label for="email" class="h4">Email</label>
-							 <input type="email" class="form-control" id="email" placeholder="Enter email" required>
-							 <div class="help-block with-errors"></div>
-						</div>
-				  </div>
-				  <div class="form-group">
-						<label for="message" class="h4 ">Message</label>
-						<textarea id="message" class="form-control" rows="5" placeholder="Enter your message" required></textarea>
-						<div class="help-block with-errors"></div>
-				  </div>
-				  <button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right ">Submit</button>
-				  <div id="msgSubmit" class="h3 text-center hidden"></div>
-				  <div class="clearfix"></div>
-			 </form>
-			 </div>
+	 
+		<h1 class="text-center h3 mt-4">Форма обратной связи</h1>
+
+		<hr>
+	 
+		<div class="text-center">
+		  <!-- Кнопка, открывающая модальное окно -->
+		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#feedbackFormModal">
+			 Открыть форму в модальном окне
+		  </button>
 		</div>
+	 
+		<!-- Форма обратной связи в модальном окне -->
+		<div class="modal" id="feedbackFormModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			 <div class="modal-content">
+				<div class="modal-header">
+				  <h5 class="modal-title" id="myModalLabel">Форма обратной связи</h5>
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					 <span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
+				<div class="modal-body">
+	 
+				  <!-- Форма обратной связи -->
+				  <form id="feedbackForm" action="/feedback/process/process.php" enctype="multipart/form-data" novalidate>
+					 <div class="form-row">
+						<div class="col-sm-6">
+						  <!-- Имя пользователя -->
+						  <div class="form-group">
+							 <label for="name" class="control-label">Имя</label>
+							 <input id="name" type="text" name="name" class="form-control" value="" placeholder="Имя" minlength="2" maxlength="30" required="required">
+							 <div class="invalid-feedback"></div>
+						  </div>
+						</div>
+						<div class="col-sm-6">
+						  <!-- Email пользователя -->
+						  <div class="form-group">
+							 <label for="email" class="control-label">Email-адрес</label>
+							 <input id="email" type="email" name="email" required="required" class="form-control" value="" placeholder="Email-адрес">
+							 <div class="invalid-feedback"></div>
+						  </div>
+						</div>
+					 </div>
+					 <!-- Сообщение пользователя -->
+					 <div class="form-group">
+						<label for="message" class="control-label">Сообщение (не менее 20 символов)</label>
+						<textarea id="message" name="message" class="form-control" rows="3" placeholder="Сообщение (не менее 20 символов)" minlength="20"
+						  maxlength="500" required="required"></textarea>
+						<div class="invalid-feedback"></div>
+					 </div>
+					 <!-- Изображения -->
+					 <div class="form-group attachments" data-maxfiles="5" data-maxsize="512" data-validext="jpg, png, gif">
+						<div>При необходимости прикрепите к сообщению изображения (максимум 5):</div>
+						<div class="custom-file">
+						  <input type="file" name="attachment[]" class="custom-file-input">
+						  <label class="custom-file-label">Выберите файл...</label>
+						  <div class="invalid-feedback"></div>
+						</div>
+					 </div>
+					 <!-- Капча -->
+					 <div class="form-group captcha">
+						<img class="img-captcha" src="/feedback/captcha/captcha.php" data-src="/feedback/captcha/captcha.php" alt="">
+						<div class="btn btn-light refresh-captcha">Обновить</div>
+						<div class="form-group">
+						  <label for="captcha" class="control-label">Код, показанный на изображении</label>
+						  <input type="text" name="captcha" maxlength="6" required="required" id="captcha" class="form-control captcha" placeholder="******"
+							 autocomplete="off" value="">
+						  <div class="invalid-feedback"></div>
+						</div>
+					 </div>
+					 <!-- Пользовательское солашение -->
+					 <div class="form-group agreement">
+						<div class="custom-control custom-checkbox">
+						  <input type="checkbox" name="agree" class="custom-control-input" id="customCheck">
+						  <label class="custom-control-label" for="customCheck">Нажимая кнопку, я принимаю условия
+							 <a href="#">Пользовательского соглашения</a> и даю своё согласие на обработку моих персональных данных, в соответствии
+							 с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных».</label>
+						</div>
+					 </div>
+					 <!-- Сообщение -->
+					 <div class="alert alert-danger form-error d-none">
+						Исправьте данные и отправьте форму ещё раз.
+					 </div>
+					 <!-- Индикация загрузки данных формы на сервер -->
+					 <div class="progress mb-2 d-none">
+						<div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+						  aria-valuemax="100" style="width: 0">
+						  <span class="sr-only">0%</span>
+						</div>
+					 </div>
+					 <!-- Кнопка для отправки формы  disabled="disabled"-->
+					 <div class="text-right submit">
+						<button type="submit" class="btn btn-primary" disabled="disabled">Отправить сообщение</button>
+					 </div>
+				  </form>
+				  <!-- Сообщение об успешной отправки формы -->
+				  <div class="alert alert-success form-success mb-0 d-none">
+					 Форма успешно отправлена. Нажмите на
+					 <a href="#" data-form="#feedbackForm">ссылку</a>, чтобы отправить ещё одно сообщение.
+				  </div>
+				</div>
+			 </div>
+		  </div>
 		</div>
 		</div>
 
