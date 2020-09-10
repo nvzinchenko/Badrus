@@ -8,158 +8,125 @@
 	<!-- Font -->
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<!-- Main CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<!-- Style CSS -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- Form CSS -->
+	<link rel="stylesheet" href="css/main.css">
 	<!-- Custom CSS -->
-	<link rel="stylesheet" href="css/animate.css">
 	<!-- <link rel="stylesheet" href="css/custom.css"> -->
 	<!-- Title -->
 	<title>Сайт компании "Бадрус"</title>
+	<style>
+		.attachments .custom-file {
+		margin-top: .5rem;
+		}
+	</style>
 </head>
 <body>
 	<!-- 	Wrapper -->
 	<div class="wrapper">
+
 		<!-- Header -->
-		<header class="header">
+		<header>
 			<!-- Container -->
-			<div class="container-fluide">
-				<div class="row">
-					<div class="col-12">
-						<!-- Carousel -->
-						<div id="headerSlider" class="carousel slide carousel-fade" data-ride="carousel">
-							<div class="carousel-inner">
-								<div class="carousel-item active">
-									<div class="header-slider header-slider_main-image"></div>
-									<div class="carousel-caption d-none d-md-block">
-										<h2><span>Строительство домов</span><br/>в Самаре и области</h2>
-										<p>Мы построили множество объектов разной степени сложности и ценовой категории.<br/>
-											Мы дадим профессиональные советы с учетом Ваших пожеланий,<br/>
-											но только Вы принимаете окончательные решения.</p>
-										<button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Заказать консультацию</button>
-									</div>
-								</div>
-								<div class="carousel-item">
-									<div class="header-slider header-slider_second-image"></div>
-									<div class="carousel-caption d-none d-md-block">
-										<h2><span>Строительство домов</span><br/>в Самаре и области</h2>
-										<p>Мы построили множество объектов разной степени сложности и ценовой категории.<br/>
-											Мы дадим профессиональные советы с учетом Ваших пожеланий,<br/>
-											но только Вы принимаете окончательные решения.</p>
-										<button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Заказать консультацию</button>
-									</div>
-								</div>
-								<div class="carousel-item">
-									<div class="header-slider header-slider_third-image"></div>
-									<div class="carousel-caption d-none d-md-block">
-										<h2><span>Строительство домов</span><br/>в Самаре и области</h2>
-										<p>Мы построили множество объектов разной степени сложности и ценовой категории.<br/>
-											Мы дадим профессиональные советы с учетом Ваших пожеланий,<br/>
-											но только Вы принимаете окончательные решения.</p>
-										<button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Заказать консультацию</button>
-									</div>
-								</div>
-								<a class="carousel-control-prev" href="#headerSlider" role="button" data-slide="prev">
-									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-									<span class="sr-only">Previous</span>
-								</a>
-								<a class="carousel-control-next" href="#headerSlider" role="button" data-slide="next">
-									<span class="carousel-control-next-icon" aria-hidden="true"></span>
-									<span class="sr-only">Next</span>
-								</a>
+			<div class="container-fluid px-0">
+
+				<!-- Carousel -->
+				<div id="headerSlider" class="carousel slide carousel-fade" data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<div class="header-slider header-slider_main-image"></div>
+							<div class="carousel-caption d-none d-md-block">
+								<h2><span>Строительство домов</span><br/>в Самаре и области</h2>
+								<p>Мы построили множество объектов разной степени сложности и ценовой категории.<br/>
+									Мы дадим профессиональные советы с учетом Ваших пожеланий,<br/>
+									но только Вы принимаете окончательные решения.</p>
+								<!-- <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Заказать консультацию</button> -->
+								<button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#feedbackFormModal">Заказать консультацию</button>
 							</div>
-						</div><!-- end-- Carousel -->
-
-						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-							<div class="modal-dialog" role="document">
-							  <div class="modal-content">
-								 <div class="modal-header">
-									<h5 class="modal-title" id="exampleModalLabel">New message</h5>
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									  <span aria-hidden="true">&times;</span>
-									</button>
-								 </div>
-								 <div class="modal-body">
-									<form role="form" id="contactForm" data-toggle="validator" class="shake"> 
-										<div class="row">
-											<div class="form-group col-sm-6">
-												 <label for="name" class="h4">Name</label>
-												 <input type="text" class="form-control" id="name" placeholder="Enter name" required data-error="NEW ERROR MESSAGE">
-												 <div class="help-block with-errors"></div>
-											</div>
-											<div class="form-group col-sm-6">
-												 <label for="email" class="h4">Email</label>
-												 <input type="email" class="form-control" id="email" placeholder="Enter email" required>
-												 <div class="help-block with-errors"></div>
-											</div>
-									  </div>
-									  <div class="form-group">
-											<label for="message" class="h4 ">Message</label>
-											<textarea id="message" class="form-control" rows="5" placeholder="Enter your message" required></textarea>
-											<div class="help-block with-errors"></div>
-									  </div>
-									</form>
-								 </div>
-								 <div class="modal-footer">
-									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-									<button type="button" class="btn btn-primary">Отправить</button>
-								 </div>
-							  </div>
+						</div>
+						<div class="carousel-item">
+							<div class="header-slider header-slider_second-image"></div>
+							<div class="carousel-caption d-none d-md-block">
+								<h2><span>Строительство домов</span><br/>в Самаре и области</h2>
+								<p>Мы построили множество объектов разной степени сложности и ценовой категории.<br/>
+									Мы дадим профессиональные советы с учетом Ваших пожеланий,<br/>
+									но только Вы принимаете окончательные решения.</p>
+								<!-- <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Заказать консультацию</button> -->
+								<button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#feedbackFormModal">Заказать консультацию</button>
 							</div>
-						 </div>
-
+						</div>
+						<div class="carousel-item">
+							<div class="header-slider header-slider_third-image"></div>
+							<div class="carousel-caption d-none d-md-block">
+								<h2><span>Строительство домов</span><br/>в Самаре и области</h2>
+								<p>Мы построили множество объектов разной степени сложности и ценовой категории.<br/>
+									Мы дадим профессиональные советы с учетом Ваших пожеланий,<br/>
+									но только Вы принимаете окончательные решения.</p>
+								<!-- <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Заказать консультацию</button> -->
+								<button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#feedbackFormModal">Заказать консультацию</button>
+							</div>
+						</div>
+						<a class="carousel-control-prev" href="#headerSlider" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next" href="#headerSlider" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
 					</div>
-					<div class="col-12">
-						<!-- Navbar -->
-						<nav class="navbar navbar-expand-lg navbar-dark fixed-top " style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%);">
-							<!-- Logo -->
-							<a class="navbar-brand" href="#">ООО "Бадрус"</a>
-								<!-- Toggle -->
-								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-									aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-									<span class="navbar-toggler-icon"></span>
-								</button>
-							<!-- Menu -->
-							<div class="collapse navbar-collapse" id="navbarSupportedContent">
-								<ul class="navbar-nav ml-auto">
-									<li class="nav-item dropdown">
-										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-											data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Услуги</a>
-										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-											<a class="dropdown-item" href="#">Action</a>
-											<a class="dropdown-item" href="#">Another action</a>
-											<div class="dropdown-divider"></div>
-											<a class="dropdown-item" href="#">Something else here</a>
-										</div>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="#about">О компании</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="#">Наши проекты</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="#">Отзывы</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="#">Контакты</a>
-									</li>
-									
-								</ul>
-								<ul class="navbar-nav ml-auto">
-								<li class="nav-item">
-									<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Работаем без
-										выходных<br />+7 (927) 704-04-08</a>
-								</li>
-							</ul>
+				</div><!-- end-- Carousel -->
+				
+				<!-- Navbar -->
+				<nav class="navbar navbar-expand-lg navbar-dark fixed-top " style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%);">
+					<!-- Logo -->
+					<a class="navbar-brand" href="#">ООО "Бадрус"</a>
+						<!-- Toggle -->
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+							aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+					<!-- Menu -->
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Услуги</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<a class="dropdown-item" href="#">Action</a>
+									<a class="dropdown-item" href="#">Another action</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#">Something else here</a>
+								</div>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#about">О компании</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Наши проекты</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Отзывы</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Контакты</a>
+							</li>
+							
+						</ul>
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item">
+								<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Работаем без выходных<br />+7 (927) 704-04-08</a>
+							</li>
+						</ul>
+					</div><!-- end-- Menu -->
+				</nav><!-- end-- Navbar -->
 
-							</div><!-- end-- Menu -->
-						</nav><!-- end-- Navbar -->
-					</div>
-				</div>
-			</div><!-- end-- Container -->
-		</header><!-- end-- Header -->
-		<!-- Section #1 -->
+			</div>
+		</header>
+
+		<!-- Section about -->
 		<section id="about" class="about">
 			<div class="container">
 				<div class="about__wrap">
@@ -179,245 +146,319 @@
 					</div>
 				</div>
 			</div>
-		</section><!-- end-- Section #1 -->
-		<!-- Section #2 -->
+		</section>
+
+		<!-- Section services -->
 		<section class="services">
 			<div class="container">
+
 				<div class="row">
 					<div class="col">
 						<h2 class="services__title">Наши услуги</h2>
 					</div>
 				</div>
+
 				<div class="row services__wrap">
-					<div class="col-md-4">
-						
-						<div class="card" style="width: 18rem;">
-							<img src="img/icon/1.png" class="card-img-top" alt="...">
-							<div class="card-body">
-							  <h5 class="card-title">Card title</h5>
-							  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							  <a href="#" class="btn btn-primary">Go somewhere</a>
+					<div class="card-deck">
+
+						<!-- Card #1 -->
+						<div class="col-md-6 col-xl-4">
+							<div class="card text-center">
+								<img src="img/icon/1.png" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h3 class="card-title">Кровельные работы</h3>
+								</div>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">Ремонт кровли</li>
+									<li class="list-group-item">Утепление крыши</li>
+									<li class="list-group-item">Установка снегозадержателей</li>
+									<li class="list-group-item">Обогрев кровли</li>
+									<li class="list-group-item">Водосточные системы</li>
+								</ul>
 							</div>
 						</div>
-					
-					</div>
 
-					<div class="col-md-4">
-						
-						<div class="card" style="width: 18rem;">
-							<img src="img/icon/2.png" class="card-img-top" alt="...">
-							<div class="card-body">
-							  <h5 class="card-title">Card title</h5>
-							  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							  <a href="#" class="btn btn-primary">Go somewhere</a>
+						<!-- Card #2 -->
+						<div class="col-md-6 col-xl-4">
+							<div class="card text-center">
+								<img src="img/icon/2.png" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h3 class="card-title">Фасадные работы</h3>
+								</div>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">Ремонт</li>
+									<li class="list-group-item">Отделка</li>
+									<li class="list-group-item">Мокрый фасад</li>
+									<li class="list-group-item">Штукатурка фасада</li>
+									<li class="list-group-item">Утепление</li>
+									<li class="list-group-item">Шпаклевка</li>
+								</ul>
 							</div>
 						</div>
-					
-					</div>
 
-					<div class="col-md-4">
-						
-						<div class="card" style="width: 18rem;">
-							<img src="img/icon/3.png" class="card-img-top" alt="...">
-							<div class="card-body">
-							  <h5 class="card-title">Card title</h5>
-							  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							  <a href="#" class="btn btn-primary">Go somewhere</a>
+						<!-- Card #3 -->
+						<div class="col-md-6 col-xl-4">
+							<div class="card text-center">
+								<img src="img/icon/3.png" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h3 class="card-title">Отделочные работы</h3>
+								</div>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">Ремонт кровли</li>
+									<li class="list-group-item">Утепление крыши</li>
+									<li class="list-group-item">Установка снегозадержателей</li>
+									<li class="list-group-item">Обогрев кровли</li>
+									<li class="list-group-item">Водосточные системы</li>
+								</ul>
 							</div>
 						</div>
-					
-					</div>
 
-					<div class="col-md-4">
-						
-						<div class="card" style="width: 18rem;">
-							<img src="img/icon/4.png" class="card-img-top" alt="...">
-							<div class="card-body">
-							  <h5 class="card-title">Card title</h5>
-							  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							  <a href="#" class="btn btn-primary">Go somewhere</a>
+						<!-- Card #4 -->
+						<div class="col-md-6 col-xl-4">
+							<div class="card text-center">
+								<img src="img/icon/4.png" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h3 class="card-title">Малоэтажное строительство</h3>
+								</div>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">Земляные работы</li>
+									<li class="list-group-item">Монтаж фундамента</li>
+									<li class="list-group-item">Строительство коробки здания до трёх этажей</li>
+									<li class="list-group-item">Монолитное строительство</li>
+								</ul>
 							</div>
 						</div>
-					
-					</div>
 
-					<div class="col-md-4">
-						
-						<div class="card" style="width: 18rem;">
-							<img src="img/icon/5.png" class="card-img-top" alt="...">
-							<div class="card-body">
-							  <h5 class="card-title">Card title</h5>
-							  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							  <a href="#" class="btn btn-primary">Go somewhere</a>
+						<!-- Card #5 -->
+						<div class="col-md-6 col-xl-4">
+							<div class="card text-center">
+								<img src="img/icon/5.png" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h3 class="card-title">Демонтаж<br />зданий</h3>
+								</div>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">Полный демонтаж зданий и сооружений</li>
+									<li class="list-group-item">Частичный демонтаж зданий и сооружений</li>
+									<li class="list-group-item">Вывоз мусора</li>
+								</ul>
 							</div>
 						</div>
-					
-					</div>
 
-					<div class="col-md-4">
-						
-						<div class="card" style="width: 18rem;">
-							<img src="img/icon/6.png" class="card-img-top" alt="...">
-							<div class="card-body">
-							  <h5 class="card-title">Card title</h5>
-							  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							  <a href="#" class="btn btn-primary">Go somewhere</a>
+						<!-- Card #6 -->
+						<div class="col-md-6 col-xl-4">
+							<div class="card text-center">
+								<img src="img/icon/6.png" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h3 class="card-title">Противопожарная обработка</h3>
+								</div>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">Огнезащитная обработка</li>
+									<li class="list-group-item">Сдача результатов работ надзорным органам</li>
+								</ul>
 							</div>
 						</div>
-					
-					</div>
 						
-
-					
+					</div>
 				</div>
-			</div>
-		</section><!-- end-- Section #2 -->
-		<section id="order">
-			<div class="overlay"></div>
-			<div class="container relative">
-				 <h2 class="text-center text-white mb-5">Оставьте заявку<br>
-				 и получите <span class="text-danger">скидку 15%</span></h2>
-				 <form action="mail.php" class="px-5 mx-sm-5 order-form" method="post">
-					  <div class="form-row text-center justify-content-around flex-sm-wrap">
-							<div class="mb-4">
-								 <input type="text" class="btn-round" name="name" required placeholder="Имя*">
-								 <div class="error hidden"></div>
-							</div>
-							<div class="mb-4">
-								 <input type="tel" class="btn-round" name="phone" required placeholder="Телефон*">
-								 <div class="error hidden"></div>
-							</div>
-							<div>
-								 <button type="submit" class="btn btn-danger btn-round">
-								 Заказать обратный звонок &rarr;</button>
-							</div>
-					  </div>
-				 </form>
-			</div>
-	  </section>
 
-	  <div class="container">
-	 
-		<h1 class="text-center h3 mt-4">Форма обратной связи</h1>
+			</div>
+		</section>
 
-		<hr>
-	 
-		<div class="text-center">
-		  <!-- Кнопка, открывающая модальное окно -->
-		  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#feedbackFormModal">
-			 Открыть форму в модальном окне
-		  </button>
-		</div>
-	 
-		<!-- Форма обратной связи в модальном окне -->
-		<div class="modal" id="feedbackFormModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		  <div class="modal-dialog" role="document">
-			 <div class="modal-content">
-				<div class="modal-header">
-				  <h5 class="modal-title" id="myModalLabel">Форма обратной связи</h5>
-				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					 <span aria-hidden="true">&times;</span>
-				  </button>
-				</div>
-				<div class="modal-body">
-	 
-				  <!-- Форма обратной связи -->
-				  <form id="feedbackForm" action="/feedback/process/process.php" enctype="multipart/form-data" novalidate>
-					 <div class="form-row">
-						<div class="col-sm-6">
-						  <!-- Имя пользователя -->
-						  <div class="form-group">
-							 <label for="name" class="control-label">Имя</label>
-							 <input id="name" type="text" name="name" class="form-control" value="" placeholder="Имя" minlength="2" maxlength="30" required="required">
-							 <div class="invalid-feedback"></div>
-						  </div>
-						</div>
-						<div class="col-sm-6">
-						  <!-- Email пользователя -->
-						  <div class="form-group">
-							 <label for="email" class="control-label">Email-адрес</label>
-							 <input id="email" type="email" name="email" required="required" class="form-control" value="" placeholder="Email-адрес">
-							 <div class="invalid-feedback"></div>
-						  </div>
-						</div>
-					 </div>
-					 <!-- Сообщение пользователя -->
-					 <div class="form-group">
-						<label for="message" class="control-label">Сообщение (не менее 20 символов)</label>
-						<textarea id="message" name="message" class="form-control" rows="3" placeholder="Сообщение (не менее 20 символов)" minlength="20"
-						  maxlength="500" required="required"></textarea>
-						<div class="invalid-feedback"></div>
-					 </div>
-					 <!-- Изображения -->
-					 <div class="form-group attachments" data-maxfiles="5" data-maxsize="512" data-validext="jpg, png, gif">
-						<div>При необходимости прикрепите к сообщению изображения (максимум 5):</div>
-						<div class="custom-file">
-						  <input type="file" name="attachment[]" class="custom-file-input">
-						  <label class="custom-file-label">Выберите файл...</label>
-						  <div class="invalid-feedback"></div>
-						</div>
-					 </div>
-					 <!-- Капча -->
-					 <div class="form-group captcha">
-						<img class="img-captcha" src="/feedback/captcha/captcha.php" data-src="/feedback/captcha/captcha.php" alt="">
-						<div class="btn btn-light refresh-captcha">Обновить</div>
-						<div class="form-group">
-						  <label for="captcha" class="control-label">Код, показанный на изображении</label>
-						  <input type="text" name="captcha" maxlength="6" required="required" id="captcha" class="form-control captcha" placeholder="******"
-							 autocomplete="off" value="">
-						  <div class="invalid-feedback"></div>
-						</div>
-					 </div>
-					 <!-- Пользовательское солашение -->
-					 <div class="form-group agreement">
-						<div class="custom-control custom-checkbox">
-						  <input type="checkbox" name="agree" class="custom-control-input" id="customCheck">
-						  <label class="custom-control-label" for="customCheck">Нажимая кнопку, я принимаю условия
-							 <a href="#">Пользовательского соглашения</a> и даю своё согласие на обработку моих персональных данных, в соответствии
-							 с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных».</label>
-						</div>
-					 </div>
-					 <!-- Сообщение -->
-					 <div class="alert alert-danger form-error d-none">
-						Исправьте данные и отправьте форму ещё раз.
-					 </div>
-					 <!-- Индикация загрузки данных формы на сервер -->
-					 <div class="progress mb-2 d-none">
-						<div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0"
-						  aria-valuemax="100" style="width: 0">
-						  <span class="sr-only">0%</span>
-						</div>
-					 </div>
-					 <!-- Кнопка для отправки формы  disabled="disabled"-->
-					 <div class="text-right submit">
-						<button type="submit" class="btn btn-primary" disabled="disabled">Отправить сообщение</button>
-					 </div>
-				  </form>
-				  <!-- Сообщение об успешной отправки формы -->
-				  <div class="alert alert-success form-success mb-0 d-none">
-					 Форма успешно отправлена. Нажмите на
-					 <a href="#" data-form="#feedbackForm">ссылку</a>, чтобы отправить ещё одно сообщение.
+		<!-- Section reviwes -->
+		<section id="reviwes">
+			<div class="container">
+			  <h2 class="text-center">Отзывы наших клиентов</h2>
+			  <h4 class="text-center my-5 pb-5">Что говорят наши клиенты</h4>
+			  <div id="carouselReviews" class="carousel slide" data-ride="carousel">
+				 <ol class="carousel-indicators">
+					 <li data-target="#carouselReviews" data-slide-to="0" class="active"></li>
+					  <li data-target="#carouselReviews" data-slide-to="1"></li>
+					  <li data-target="#carouselReviews" data-slide-to="2"></li>
+				  </ol>
+				  <div class="carousel-inner">
+					 <div class="carousel-item active">
+						<div class="row">
+						  <div class="offset-sm-2 col-sm-3 col-md-2"><img src="img/customers/tatyana.jpg" class="img-fluid rounded-circle d-block m-auto pb-3" alt="Лариса Уварова"></div>
+						<div class="offset-md-1 col-md-5 col-sm-5">
+				 <div class="review">
+					Работой специалистов данной компании остались более чем довольны! На дачном участке нам построили летний домик! Всё просто супер получилось! Качество и красота просто на высоте! Да и цена со скоростью монтажа приятно удивили! Спасибо!
+				  <div class="review-author">
+					Татьяна Смирнова
 				  </div>
 				</div>
 			 </div>
 		  </div>
-		</div>
-		</div>
+		 </div>
+		  <div class="carousel-item">
+			 <div class="row">
+				 <div class="offset-sm-2 col-sm-3 col-md-2"><img src="img/customers/vasiliy.jpg" class="img-fluid rounded-circle d-block m-auto pb-3" alt="Игорь Минаев"></div>
+				 <div class="offset-md-1 col-md-5 col-sm-5">
+			  <div class="review">
+				
+Работаем с данной компанией уже довольно давно. Никаких нареканий, одни положительные впечатления. Будем продолжать сотрудничество.
+			  <div class="review-author">
+				Василий Соболев
+			  </div>
+			 </div>
+			</div>
+		 </div>
+		 </div>
+		 <div class="carousel-item">
+			<div class="row">
+			  <div class="offset-sm-2 col-sm-3 col-md-2"><img src="img/customers/unknown.jpg" class="img-fluid rounded-circle d-block m-auto pb-3" alt="Мила Синицина"></div>
+				 <div class="offset-md-1 col-md-5 col-sm-5">
+					<div class="review">
+			
+Ребята молодцы, делают свою работу на высоком уровне. Часто проводятся скидки, акции, что особо радует :) Буду рекомендовать всем друзьям и близким.
+					<div class="review-author">
+					Сергей Иванов
+					</div>
+				 </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <a class="carousel-control-prev" href="#carouselReviews" role="button" data-slide="prev">
+			 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			 <span class="sr-only">Previous</span>
+		 </a>
+		 <a class="carousel-control-next" href="#carouselReviews" role="button" data-slide="next">
+			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				 <span class="sr-only">Next</span>
+			</a>
+		 </div>
+		 </div>
+		  </section>
+
+		<!-- Section #3 -->
+		<section class="">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 offset-3">
+						<p class="footer__copyright text-center">Copyright ООО "Бадрус" © 2019 - 2020</p>
+					</div>
+				</div>
+			</div>
+		</footer>
 
 
+	<!-- Form -->
+		<!-- Форма обратной связи в модальном окне -->
+		<div class="modal" id="feedbackFormModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+			  <div class="modal-content">
+				 <div class="modal-header">
+					<h5 class="modal-title" id="myModalLabel">Форма обратной связи</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				 </div>
+				 <div class="modal-body">
+	  
+					<!-- Форма обратной связи -->
+					<form id="feedbackForm" action="process/process.php" enctype="multipart/form-data" novalidate>
+					  <div class="form-row">
+						 <div class="col-sm-6">
+							<!-- Имя пользователя -->
+							<div class="form-group">
+							  <label for="name" class="control-label">Имя</label>
+							  <input id="name" type="text" name="name" class="form-control" value="" placeholder="Имя" minlength="2" maxlength="30" required="required">
+							  <div class="invalid-feedback"></div>
+							</div>
+						 </div>
+						 <div class="col-sm-6">
+							<!-- Email пользователя -->
+							<div class="form-group">
+							  <label for="email" class="control-label">Email-адрес</label>
+							  <input id="email" type="email" name="email" required="required" class="form-control" value="" placeholder="Email-адрес">
+							  <div class="invalid-feedback"></div>
+							</div>
+						 </div>
+					  </div>
+					  <!-- Сообщение пользователя -->
+					  <div class="form-group">
+						 <label for="message" class="control-label">Сообщение (не менее 20 символов)</label>
+						 <textarea id="message" name="message" class="form-control" rows="3" placeholder="Сообщение (не менее 20 символов)" minlength="20"
+							maxlength="500" required="required"></textarea>
+						 <div class="invalid-feedback"></div>
+					  </div>
+					  <!-- Изображения -->
+					  <div class="form-group attachments" data-maxfiles="5" data-maxsize="512" data-validext="jpg, png, gif">
+						 <div>При необходимости прикрепите к сообщению изображения (максимум 5):</div>
+						 <div class="custom-file">
+							<input type="file" name="attachment[]" class="custom-file-input">
+							<label class="custom-file-label">Выберите файл...</label>
+							<div class="invalid-feedback"></div>
+						 </div>
+					  </div>
+					  <!-- Капча -->
+					  <div class="form-group captcha">
+						 <img class="img-captcha" src="captcha/captcha.php" data-src="captcha/captcha.php" alt="1">
+						 <div class="btn btn-light refresh-captcha">Обновить</div>
+						 <div class="form-group">
+							<label for="captcha" class="control-label">Код, показанный на изображении</label>
+							<input type="text" name="captcha" maxlength="6" required="required" id="captcha" class="form-control captcha" placeholder="******"
+							  autocomplete="off" value="">
+							<div class="invalid-feedback"></div>
+						 </div>
+					  </div>
+					  <!-- Пользовательское солашение -->
+					  <div class="form-group agreement">
+						 <div class="custom-control custom-checkbox">
+							<input type="checkbox" name="agree" class="custom-control-input" id="customCheck">
+							<label class="custom-control-label" for="customCheck">Нажимая кнопку, я принимаю условия
+							  <a href="#">Пользовательского соглашения</a> и даю своё согласие на обработку моих персональных данных, в соответствии
+							  с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных».</label>
+						 </div>
+					  </div>
+					  <!-- Сообщение -->
+					  <div class="alert alert-danger form-error d-none">
+						 Исправьте данные и отправьте форму ещё раз.
+					  </div>
+					  <!-- Индикация загрузки данных формы на сервер -->
+					  <div class="progress mb-2 d-none">
+						 <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+							aria-valuemax="100" style="width: 0">
+							<span class="sr-only">0%</span>
+						 </div>
+					  </div>
+					  <!-- Кнопка для отправки формы  disabled="disabled"-->
+					  <div class="text-right submit">
+						 <button type="submit" class="btn btn-primary" disabled="disabled">Отправить сообщение</button>
+					  </div>
+					</form>
+					<!-- Сообщение об успешной отправки формы -->
+					<div class="alert alert-success form-success mb-0 d-none">
+					  Форма успешно отправлена. Нажмите на
+					  <a href="#" data-form="#feedbackForm">ссылку</a>, чтобы отправить ещё одно сообщение.
+					</div>
+				 </div>
+			  </div>
+			</div>
+		 </div>
+	<!-- end-- Form-->
 
 	</div><!-- end-- Wrapper -->
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/validator.min.js"></script>
-<script type="text/javascript" src="js/form-scripts.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<!-- Form JavaScript -->
+<script src="js/process-forms.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 </html>

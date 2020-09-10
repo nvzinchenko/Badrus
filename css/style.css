@@ -47,21 +47,27 @@ header .carousel-control-prev, .carousel-control-next {
 }
 
 .header-slider_main-image {
-	background: url(../img/house.jpg) center no-repeat;
-	background-size: cover;
+	background: url(../img/house.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 .header-slider_second-image {
-	background: url(../img/slider_2.jpg) center no-repeat;
-	background-size: cover;
+	background: url(../img/slider_2.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 .header-slider_third-image{
-	background: url(../img/slider_3.jpg) center no-repeat;
-	background-size: cover;
+	background: url(../img/slider_3.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 .header-slider_main-image::after, .header-slider_second-image::after, .header-slider_third-image::after {
@@ -79,7 +85,7 @@ header .carousel-control-prev, .carousel-control-next {
 	text-align: left;
 }
 
-.about__wrap{
+.about__wrap {
 	padding: 150px 0;
 }
 
@@ -100,25 +106,43 @@ header .carousel-control-prev, .carousel-control-next {
 	margin: 10px !important;
 }
 
-.services__wrap{
+.services__wrap {
 	padding: 50px 0 150px 0;
 }
+
 .services__wrap .card {
 	margin-bottom: 100px;
 }
+
 .card {
 	border: none;
 	background-color: transparent;
-
 }
+
+.card-deck .card {
+	margin-bottom: 50px;
+}
+
 .card img{
 	height: 90px;
 	width: 90px;
+	margin-left: auto;
+	margin-right: auto;
 }
-.navbar{
+
+.card-text {
+	color: #777;
+}
+
+.list-group-item {
+	font-size: 16px;
+	background-color: transparent;
+}
+
+.navbar {
 	padding: 1rem 2.5rem;
 }
-.navbar-brand{
+.navbar-brand {
 	font-size: 2.25rem;
 	font-weight: 300;
 }
@@ -183,3 +207,63 @@ header .carousel-control-prev, .carousel-control-next {
 .btn-outline-light:focus, .btn-outline-light.focus {
 	box-shadow: 0 0 0 0.1rem rgba(248, 249, 250, 0.5);
 }
+
+.footer {
+	background-color: #000;
+}
+.footer__copyright {
+	color: #fff;
+	margin: 0;
+	padding: 2rem 0;
+}
+
+
+
+
+
+
+#reviwes {
+	padding-top: 40px;
+	padding-bottom: 80px;
+	font-family: 'Rubik', sans-serif;
+ }
+ .review-author {
+	  font-size: 22px;
+	  font-weight: 500;
+	  margin-top: 30px;
+	  text-transform: uppercase;
+ }
+ 
+ .carousel-indicators {
+	  bottom: -58px;
+ }
+ 
+ .carousel-indicators li {
+	  background-color: rgba(0, 0, 0, .5);
+ }
+ 
+ .carousel-indicators .active {
+	  background-color: #000;
+ }
+ 
+ 
+ .carousel-control-next-icon,
+ .carousel-control-prev-icon {
+	  width: 35px;
+	  height: 35px;
+ }
+ 
+ .carousel-control-prev-icon {
+		  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+ }
+ 
+ .carousel-control-next-icon {
+		  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+ }
+ 
+ @media (max-width: 575px) {
+	  .review {
+			padding-left: 40px;
+			padding-right: 20px;
+	  }
+ }
